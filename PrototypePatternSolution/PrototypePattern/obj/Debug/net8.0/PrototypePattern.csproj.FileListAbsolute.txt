@@ -1,0 +1,14 @@
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\bin\Debug\net8.0\PrototypePattern.exe
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\bin\Debug\net8.0\PrototypePattern.deps.json
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\bin\Debug\net8.0\PrototypePattern.runtimeconfig.json
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\bin\Debug\net8.0\PrototypePattern.dll
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\bin\Debug\net8.0\PrototypePattern.pdb
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\PrototypePattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\PrototypePattern.AssemblyInfoInputs.cache
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\PrototypePattern.AssemblyInfo.cs
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\PrototypePattern.csproj.CoreCompileInputs.cache
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\PrototypePattern.dll
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\refint\PrototypePattern.dll
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\PrototypePattern.pdb
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\PrototypePattern.genruntimeconfig.cache
+C:\Users\amirm\Desktop\DesingPatterns\PrototypePatternSolution\PrototypePattern\obj\Debug\net8.0\ref\PrototypePattern.dll
