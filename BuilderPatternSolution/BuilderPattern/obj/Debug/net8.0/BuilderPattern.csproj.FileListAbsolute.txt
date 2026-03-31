@@ -1,0 +1,14 @@
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\bin\Debug\net8.0\BuilderPattern.exe
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\bin\Debug\net8.0\BuilderPattern.deps.json
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\bin\Debug\net8.0\BuilderPattern.runtimeconfig.json
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\bin\Debug\net8.0\BuilderPattern.dll
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\bin\Debug\net8.0\BuilderPattern.pdb
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\BuilderPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\BuilderPattern.AssemblyInfoInputs.cache
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\BuilderPattern.AssemblyInfo.cs
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\BuilderPattern.csproj.CoreCompileInputs.cache
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\BuilderPattern.dll
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\refint\BuilderPattern.dll
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\BuilderPattern.pdb
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\BuilderPattern.genruntimeconfig.cache
+C:\Users\amirm\Desktop\DesingPatterns\BuilderPatternSolution\BuilderPattern\obj\Debug\net8.0\ref\BuilderPattern.dll
