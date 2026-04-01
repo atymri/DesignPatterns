@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{234EAC60-648D-48C9-9EFD-CED12C9070FA}|BuilderPattern\\BuilderPattern.csproj|c:\\users\\amirm\\desktop\\desingpatterns\\builderpatternsolution\\builderpattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{234EAC60-648D-48C9-9EFD-CED12C9070FA}|BuilderPattern\\BuilderPattern.csproj|solutionrelative:builderpattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{234EAC60-648D-48C9-9EFD-CED12C9070FA}|BuilderPattern\\BuilderPattern.csproj|c:\\users\\amirm\\desktop\\desingpatterns\\builderpatternsolution\\builderpattern\\implementation#2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{234EAC60-648D-48C9-9EFD-CED12C9070FA}|BuilderPattern\\BuilderPattern.csproj|solutionrelative:builderpattern\\implementation#2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,13 +46,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Implementation#2.cs",
+              "DocumentMoniker": "C:\\Users\\amirm\\Desktop\\DesingPatterns\\BuilderPatternSolution\\BuilderPattern\\Implementation#2.cs",
+              "RelativeDocumentMoniker": "BuilderPattern\\Implementation#2.cs",
+              "ToolTip": "C:\\Users\\amirm\\Desktop\\DesingPatterns\\BuilderPatternSolution\\BuilderPattern\\Implementation#2.cs",
+              "RelativeToolTip": "BuilderPattern\\Implementation#2.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwE8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T23:41:51.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\amirm\\Desktop\\DesingPatterns\\BuilderPatternSolution\\BuilderPattern\\Program.cs",
               "RelativeDocumentMoniker": "BuilderPattern\\Program.cs",
-              "ToolTip": "C:\\Users\\amirm\\Desktop\\DesingPatterns\\BuilderPatternSolution\\BuilderPattern\\Program.cs",
-              "RelativeToolTip": "BuilderPattern\\Program.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAqwKcAAAAxAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\amirm\\Desktop\\DesingPatterns\\BuilderPatternSolution\\BuilderPattern\\Program.cs*",
+              "RelativeToolTip": "BuilderPattern\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T22:10:22.296Z",
               "EditorCaption": ""
