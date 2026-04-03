@@ -48,17 +48,19 @@ namespace BuilderPattern
             #region Implementation#2
 
             // in this scenario client is the director
-            // and i have implemented the method chaining!
+            // and I have implemented the method chaining!
+            // you can use these methods in any order
             var customCar = new Car("FORD")
-                .StartOperation()
-                .BuildBody()
+                .StartOperation("just started making a new ford, wish me luck!")
+                .BuildBody("steel")
                 .AddWHeels(4)
                 .AddHeadlights(2)
-                .EndOperation()
+                .EndOperation("just made my new ford!")
                 .Construct();
 
             customCar.Show();
 
+            // not so smart way:
             var anotherOne = new Car("MERCEDES BENZ");
             anotherOne.StartOperation();
             anotherOne.BuildBody();

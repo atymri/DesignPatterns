@@ -3,7 +3,29 @@ using System.Transactions;
 
 namespace PrototypePattern
 {
-    // prototype pattern, something you have seen in AutoMapper!
+    /*
+     * PROTOTYPE PATTERN
+     * each onject has to be created based on an specific prototype,
+     * so for creating a new object, we copy that prototype
+     *
+     * GoF Definition:
+     *   specify the types of objects to create using a prototypical instance,
+     *   and create new objects by copying that prototype
+     *
+     * real world example could be like this:
+     *   suppose that you have a master copy of a valuable document. You need to
+     *   incorporate some changes to it to analyze the effect of the changes. In this case,
+     *   you can make a photocopy of the original document and edit the changes in the
+     *   photocopied document.
+     *
+     * computer world example could be like this:
+     *   let’s assume that you already have a stable application. In the future, you may
+     *   want to modify the application with some small changes. You must start with a
+     *   copy of your original application, make the changes, and then analyze it further.
+     *   You do not want to start from scratch merely to make a change; this would cost
+     *   you time and money.
+     *   In .NET, the ICloneable interface contains a Clone() method.
+     */
     internal class Program
     {
         static void Main(string[] args)

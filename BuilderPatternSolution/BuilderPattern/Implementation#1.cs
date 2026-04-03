@@ -9,10 +9,40 @@ namespace BuilderPattern_FirstImplementation
     /*
      * BUILDER PATTERN
      * this pattern is used to create complex objects
+     *
+     * GoF Definition:
+     *   separate the object creation process in complex objects from its representations
+     *   so the same object creation process can be used for different representations
+     *
+     * General Definition:
+     *   The Builder pattern is useful for creating complex objects that have multiple
+     *   parts. The object creation process should be independent of these parts; in other
+     *   words, the construction process does not care how these parts are assembled. In
+     *   addition, as per the definition, you should be able to use the same construction
+     *   process to create different representations of the objects.
+     *   According to the GoF, four different players are involved in this pattern
+     *
+     *   1. builder 
+     *   2. concrete builder 
+     *   3. director
+     *   4. product 
+     *
+     *   builder object is an interface and assembles different parts of the product
+     *   the concrete builder implements it.
+     *   director is responsible for creating the product using the builder interface,
+     *   at the same time it decides in which order the final product should be created.
+     *   
+     *   
+     *   
+     * real world example could be like this:
+     *      when you (director) want to buy a personal computer (product),
+     *      first you must order the parts, separately,
+     *      then the assembler (concrete builder) assembles them for you
      */
 
     internal interface IBuilder
     {
+        // the operations that must be done in order to create the final product
         void StartOperation();
         void CreateBody();
         void AddWheels();
@@ -26,6 +56,8 @@ namespace BuilderPattern_FirstImplementation
         private IBuilder _builder;
         public void Build(IBuilder builder)
         {
+            // as said in general definition, director calls the methods,
+            // based on the given concrete builder object, here builder can be anything that inherits from it.
             _builder = builder;
             _builder.StartOperation();
             _builder.CreateBody();
@@ -45,32 +77,25 @@ namespace BuilderPattern_FirstImplementation
             _product = new Product();
             _brandName = brandName;
         }
-
         public void StartOperation()
             => Console.WriteLine(new string('-', 5) + "START" + new string('-', 5));
-
         public void CreateBody()
         {
             Console.WriteLine($"[+] creating the body for {_brandName}");
             _product.Add("BODY");
         }
-
         public void AddHeadlights()
         {
             Console.WriteLine($"[+] adding 2 headlights for {_brandName}");
             _product.Add("HEADLIGHT * 2");
         }
-
         public void AddWheels()
         {
             Console.WriteLine($"[+] adding 4 wheels for {_brandName}");
             _product.Add("WHEELS * 4");
         }
-
-
         public void EndOperation()
             => Console.WriteLine(new string('-', 5) + "FINISH" + new string('-', 5));
-
 
         public Product GetProduct()
             => _product;
@@ -114,11 +139,11 @@ namespace BuilderPattern_FirstImplementation
 
     internal class Product
     {
-        private System.Collections.Generic.List<string> _parts;
+        private List<string> _parts;
 
         public Product()
         {
-            _parts = new System.Collections.Generic.List<string>();
+            _parts = new List<string>();
         }
 
         public void Add(string part)

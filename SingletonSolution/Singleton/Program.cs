@@ -1,5 +1,28 @@
 ﻿using System.Runtime.CompilerServices;
 
+/*
+ * SINGLETON PATTERN
+ * this pattern is used to ensure that only one instance of an object is created,
+ * and only that object is accessible
+ *
+ * GoF Definition:
+ *   Ensure a class has only one instance, and provides a global access to it.
+ *
+ * real world example could be like this:
+ *   lets assume that you have a sport team that is participating in a tournament
+ *   you will face multiple opponents, as per the rule of the captain has to toss a coin.
+ *   if your team does not have a captain, you will have to elect one to be the captain of the team
+ *   in duration of the tournament. Prior to each match and each coin toss,
+ *   you may not repeat the process of electing a captain if you have already done so.
+ *
+ * computer world example could be like this:
+ *   in some software systems you may decide to maintain only one file system
+ *   so that you can use it for centralized management of resources, and you can implement caching more efficient
+ *   you also use this pattern in maintaining a thread pool in a multi threading environment.
+ *   
+ *   
+ *
+ */
 namespace Singleton
 {
     //public sealed class Singleton

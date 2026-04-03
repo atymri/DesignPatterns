@@ -19,8 +19,10 @@ namespace BuilderPattern_SecondImplementation
         Product Construct();
     }
 
+
     public class Car : IBuilder
     {
+        
         private Product _car;
         private readonly string _brand;
         public Car(string brand)
