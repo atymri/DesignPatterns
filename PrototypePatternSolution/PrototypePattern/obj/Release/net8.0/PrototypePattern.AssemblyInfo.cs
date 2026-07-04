@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrototypePattern")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce9aafbd1a340dc7df97d40d7cc8831e50b606be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67d72ed9e206536e8f8dd158de5c8ffcf0b08b85")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrototypePattern")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrototypePattern")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
