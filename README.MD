@@ -18,6 +18,7 @@ This repository is a collection of classic design patterns implemented in C#. My
 | **Builder** | Constructs complex objects step-by-step. | [View](./BuilderPatternSolution/) |
 | **Factory Method** | Defines an interface for object creation. | [View](./FactorymethodPatternSolution/) |
 | **Prototype** | Creates new objects by cloning instances. | [View](./PrototypePatternSolution/) |
+| **Proxy** | Provides a surrogate or placeholder. | [View](./ProxyPatternSolution/) |
 | **Singleton** | Ensures a class has a single instance. | [View](./SingletonSolution/) |
 
 ---
@@ -40,4 +41,5 @@ This repository is a collection of classic design patterns implemented in C#. My
 | **Builder** | ساخت مرحله به مرحله اشیاء پیچیده. | [مشاهده](./BuilderPatternSolution/) |
 | **Factory Method** | تعریف رابطی برای ایجاد اشیاء. | [مشاهده](./FactorymethodPatternSolution/) |
 | **Prototype** | ایجاد اشیاء جدید از طریق کپی کردن نمونه‌ها. | [مشاهده](./PrototypePatternSolution/) |
+| **Proxy** | ارائه یک جایگزین برای کنترل دسترسی. | [مشاهده](./ProxyPatternSolution/) |
 | **Singleton** | تضمین اینکه یک کلاس فقط یک نمونه دارد. | [مشاهده](./SingletonSolution/) |
