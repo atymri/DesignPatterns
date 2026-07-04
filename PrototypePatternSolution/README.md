@@ -1,3 +1,6 @@
+[English](#english) | [فارسی](#farsi)
+
+<a name="english"></a>
 # Prototype Design Pattern
 
 The Prototype pattern is a creational design pattern that allows objects to be created by cloning an existing object. It promotes the creation of new objects by copying a prototypical instance, rather than by instantiating classes directly. This is particularly useful when the instantiation of an object is expensive or complex, or when you need to create many similar objects.
@@ -40,33 +43,6 @@ This repository demonstrates the Prototype pattern in two main ways:
 
 **Deep Copy:** A deep copy creates a completely independent copy of the object, including any objects referenced by the original. Modifying the cloned object or its referenced objects does not affect the original.
 
-**Example Usage (from `Program.cs`):
-
-```csharp
-// Demonstration 1 (Car Cloning - commented out in example)
-// var ford = factory.GetFord();
-// var fordClone = ford.Clone();
-// fordClone.onRoadPrice = fordClone.basePrice + BaseCar.SetAdditionalPrice();
-// // Changes to fordClone.onRoadPrice do not affect ford (if BaseCar had no ref types)
-
-// Demonstration 2 (Employee Cloning)
-var empAddress = new EmpAddress("123 abc street");
-var emp = new Employee(1, "someone", empAddress);
-
-// Using clone constructor for deep copy
-var clonedEmp = new Employee(emp);
-
-// Modifying the original employee's address (via reference)
-empAddress.Address = "CHANGED FOR CLONE!";
-
-Console.WriteLine("[ORIGINAL]  " + emp);
-Console.WriteLine("[CLONED]    " + clonedEmp);
-
-// Output:
-// [ORIGINAL]  Employee name is: someone, Employee Id is: 1, Employee Address is: CHANGED FOR CLONE!
-// [CLONED]      Employee name is: someone, Employee Id is: 1, Employee Address is: 123 abc street
-```
-
 ## UML Structure
 
 ```mermaid
@@ -88,15 +64,6 @@ classDiagram
     Prototype <|.. ConcretePrototype2
     Client --> Prototype
 ```
-
-## When to Use
-
-Use the Prototype pattern when:
-
-*   You need to create objects whose class is determined by a prototypical instance.
-*   It is more efficient to copy an existing object than to create a new one.
-*   The objects to be created have a large number of fields or complex initialization logic.
-*   You want to reduce the number of classes in your system by using object composition and delegation.
 
 ## Project Implementation UML
 
@@ -123,3 +90,117 @@ classDiagram
     BaseCar <|-- Chevy
     Employee --> EmpAddress
 ```
+
+## When to Use
+
+Use the Prototype pattern when:
+
+*   You need to create objects whose class is determined by a prototypical instance.
+*   It is more efficient to copy an existing object than to create a new one.
+*   The objects to be created have a large number of fields or complex initialization logic.
+*   You want to reduce the number of classes in your system by using object composition and delegation.
+
+<br>
+<br>
+
+---
+
+<a name="farsi"></a>
+# الگوی طراحی Prototype (Prototype Design Pattern)
+
+الگوی "Prototype" یک الگوی طراحی "سازنده" (Creational Design Pattern) است که به شما اجازه می‌دهد اشیاء را با کپی کردن (Cloning) از یک شیء موجود بسازید. این الگو به جای اینکه مستقیماً از کلاس‌ها نمونه‌سازی (Instantiate) کند، اشیاء جدید را با کپی گرفتن از یک "نمونه اولیه" (Prototypical Instance) ایجاد می‌کند. این روش به ویژه زمانی مفید است که ایجاد یک شیء هزینه سنگین یا پیچیدگی زیادی دارد، یا زمانی که نیاز دارید تعداد زیادی شیء مشابه بسازید.
+
+## این الگو چه مشکلی را حل می‌کند؟
+
+این الگو چالش ایجاد اشیاء را در شرایط زیر حل می‌کند:
+
+*   کلاس‌های اشیایی که باید ساخته شوند تا زمان اجرا مشخص نیستند.
+*   کلاس‌های مورد نیاز برای نمونه‌سازی توسط یک نمونه اولیه تعیین می‌شوند که ممکن است تغییر کند.
+*   هزینه ایجاد اشیاء بالا است (مثلاً شامل مقداردهی اولیه پیچیده یا بارگذاری منابع است).
+*   نیاز به ایجاد تعداد زیادی شیء مشابه دارید و کپی گرفتن از یک شیء موجود، کارآمدتر از فراخوانی مکرر سازنده (Constructor) است.
+
+## راه حل این الگو چیست؟
+
+الگوی Prototype شامل سه بخش اصلی است:
+
+1.  **Prototype (نمونه اولیه - BaseCar, Employee, EmpAddress):** یک رابط یا کلاس انتزاعی برای "شبیه‌سازی" یا کپی کردن از خودش تعریف می‌کند. معمولاً شامل یک متد به نام `Clone()` است.
+2.  **Concrete Prototype (نمونه اولیه بتنی - Ford, Chevy, Employee, EmpAddress):** مکانیسم کپی کردن را پیاده‌سازی می‌کند. این کار معمولاً شامل ایجاد یک نمونه جدید و کپی کردن حالت (State) شیء فعلی به نمونه جدید است.
+3.  **Client:** اشیاء جدید را با درخواست یک نسخه کپی شده (Clone) از یک شیء نمونه اولیه ایجاد می‌کند. Client می‌تواند با رابط‌های نمونه اولیه انتزاعی یا کلاس‌های نمونه اولیه بتنی کار کند.
+
+## جزئیات پیاده‌سازی (مثال C#)
+
+این پروژه الگوی Prototype را به دو صورت اصلی نمایش می‌دهد:
+
+### نمایش اول: کپی کردن ماشین‌ها
+
+*   **`BaseCar` (نمونه اولیه انتزاعی):** یک کلاس انتزاعی که `ModelName` ، `basePrice` ، `onRoadPrice` و یک متد انتزاعی `Clone()` را تعریف می‌کند. همچنین شامل یک متد کمکی استاتیک `SetAdditionalPrice()` برای شبیه‌سازی قیمت‌گذاری متغیر است.
+*   **`Ford` و `Chevy` (نمونه‌های اولیه بتنی):** از `BaseCar` ارث‌بری کرده و متد `Clone()` را با استفاده از `MemberwiseClone()` پیاده‌سازی می‌کنند. `MemberwiseClone()` یک کپی کم‌عمق (Shallow Copy) ایجاد می‌کند.
+*   **`CarFactory`:** به عنوان یک کارخانه عمل می‌کند که نمونه‌های اولیه (`ford` ، `chevy`) را نگهداری می‌کند و متدهایی (`GetFord` ، `GetChevy`) برای برگرداندن کپی‌های این نمونه‌های اولیه ارائه می‌دهد.
+
+**کپی کم‌عمق (Shallow Copy):** متد `MemberwiseClone()` یک کپی کم‌عمق انجام می‌دهد. برای انواع مقدار (Value Types مانند `int`)، مقادیر مستقیماً کپی می‌شوند. برای انواع مرجع (Reference Types مانند `string` که تغییرناپذیر است، یا یک مرجع به شیء سفارشی)، فقط مرجع کپی می‌شود. این بدان معناست که هم شیء اصلی و هم کپیِ آن ممکن است برای انواع مرجع به "همان" شیء در حافظه اشاره کنند، که اگر یکی از آن‌ها شیء ارجاع‌شده را تغییر دهد، می‌تواند عوارض ناخواسته‌ای داشته باشد.
+
+### نمایش دوم: کپی کردن کارمند (کپی کم‌عمق در مقابل کپی عمیق)
+
+*   **`EmpAddress`:** یک کلاس ساده که یک آدرس را نشان می‌دهد و متد `Clone()` آن از `MemberwiseClone()` استفاده می‌کند.
+*   **`Employee`:** شامل `Id` ، `Name` و یک شیء `EmpAddress` است. دو روش برای کپی کردن را نشان می‌دهد:
+    *   **سازنده کپی (Clone Constructor):** (`public Employee(Employee emp)`): این یک رویکرد **کپی عمیق (Deep Copy)** را نشان می‌دهد که در آن شیء `Address` با استفاده از `emp.Address.Clone()` به صراحت کپی می‌شود. این کار تضمین می‌کند که کارمند کپی شده، شیء آدرس خاص خودش را دارد.
+    *   متد `Clone()` که یک **کپی کم‌عمق** با استفاده از `MemberwiseClone()` انجام می‌دهد و سپس `Address` را به صورت دستی کپی عمیق می‌کند.
+
+**کپی عمیق (Deep Copy):** یک کپی عمیق، یک کپی کاملاً مستقل از شیء، از جمله هر شیئی که توسط اصلی ارجاع داده شده است، ایجاد می‌کند. تغییر در شیء کپی شده یا اشیاء ارجاعی آن، تاثیری بر اصلی ندارد.
+
+## ساختار UML
+
+```mermaid
+classDiagram
+    class Prototype {
+        <<interface>>
+        +Clone()
+    }
+    class ConcretePrototype1 {
+        +Clone()
+    }
+    class ConcretePrototype2 {
+        +Clone()
+    }
+    class Client {
+    }
+
+    Prototype <|.. ConcretePrototype1
+    Prototype <|.. ConcretePrototype2
+    Client --> Prototype
+```
+
+## ساختار UML پیاده‌سازی پروژه
+
+```mermaid
+classDiagram
+    class BaseCar {
+        <<abstract>>
+        +Clone()
+    }
+    class Ford {
+        +Clone()
+    }
+    class Chevy {
+        +Clone()
+    }
+    class Employee {
+        +Clone()
+    }
+    class EmpAddress {
+        +Clone()
+    }
+
+    BaseCar <|-- Ford
+    BaseCar <|-- Chevy
+    Employee --> EmpAddress
+```
+
+## چه زمانی باید از این الگو استفاده کنیم؟
+
+هنگامی که از الگوی Prototype استفاده کنید:
+
+*   نیاز به ایجاد اشیایی دارید که کلاس آن‌ها توسط یک نمونه اولیه تعیین می‌شود.
+*   کپی کردن یک شیء موجود کارآمدتر از ایجاد یک شیء جدید است.
+*   اشیاء مورد نیاز برای ایجاد دارای تعداد زیادی فیلد یا منطق مقداردهی اولیه پیچیده هستند.
+*   می‌خواهید تعداد کلاس‌ها را در سیستم خود با استفاده از ترکیب اشیاء (Object Composition) و تفویض (Delegation) کاهش دهید.
