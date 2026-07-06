@@ -16,6 +16,7 @@ This repository is a collection of classic design patterns implemented in C#. My
 | :--- | :--- | :--- |
 | **Abstract Factory** | Creates families of related objects. | [View](./AbstractFactoryPatternSolution/) |
 | **Builder** | Constructs complex objects step-by-step. | [View](./BuilderPatternSolution/) |
+| **Decorator** | Attatch additional responsibilities to an object dynamically. | [View](./DecoratorPatternSolutionSolution/) |
 | **Factory Method** | Defines an interface for object creation. | [View](./FactorymethodPatternSolution/) |
 | **Prototype** | Creates new objects by cloning instances. | [View](./PrototypePatternSolution/) |
 | **Proxy** | Provides a surrogate or placeholder. | [View](./ProxyPatternSolution/) |
@@ -39,6 +40,7 @@ This repository is a collection of classic design patterns implemented in C#. My
 | :--- | :--- | :--- |
 | **Abstract Factory** | ایجاد خانواده‌هایی از اشیاء مرتبط. | [مشاهده](./AbstractFactoryPatternSolution/) |
 | **Builder** | ساخت مرحله به مرحله اشیاء پیچیده. | [مشاهده](./BuilderPatternSolution/) |
+| **Decorator** | افزودن پویای فرایند ها به شئ مورد نظر| [مشاهده](./DecoratorPatternSolutionSolution/) |
 | **Factory Method** | تعریف رابطی برای ایجاد اشیاء. | [مشاهده](./FactorymethodPatternSolution/) |
 | **Prototype** | ایجاد اشیاء جدید از طریق کپی کردن نمونه‌ها. | [مشاهده](./PrototypePatternSolution/) |
 | **Proxy** | ارائه یک جایگزین برای کنترل دسترسی. | [مشاهده](./ProxyPatternSolution/) |
